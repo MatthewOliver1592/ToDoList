@@ -23,6 +23,7 @@ function addItem(e){
 
 function removeItem(e){
     let text = e.target.innerText;
+    e.target.className = 'list-group-item';
     e.target.innerHTML = '<del>'+text+'</del>';
     let timeout = setTimeout(delayedDelete, 1000);
     function delayedDelete (){
