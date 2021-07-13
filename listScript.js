@@ -7,6 +7,9 @@ itemList.addEventListener('click', removeItem);
 
 function addItem(e){
     e.preventDefault();
+    if (document.querySelector('input').value == "") {
+        alert("You must enter a value!");
+    } else {
     let newToDo = document.getElementById('item').value;
     let newLi = document.createElement("li");
     newLi.className = 'list-group-item';
@@ -14,6 +17,7 @@ function addItem(e){
     itemList.appendChild(newLi);
     let input = document.querySelector('input');
     input.value = "";
+    }
 }
 
 
