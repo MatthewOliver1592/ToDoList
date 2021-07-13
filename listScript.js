@@ -7,9 +7,6 @@ itemList.addEventListener('click', removeItem);
 
 function addItem(e){
     e.preventDefault();
-    if (input.value === "") {
-        return "Must not be blank!";
-    } else {
     let newToDo = document.getElementById('item').value;
     let newLi = document.createElement("li");
     newLi.className = 'list-group-item';
@@ -17,7 +14,6 @@ function addItem(e){
     itemList.appendChild(newLi);
     let input = document.querySelector('input');
     input.value = "";
-    }
 }
 
 
