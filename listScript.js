@@ -24,7 +24,7 @@ function addItem(e){
 function removeItem(e){
     let text = e.target.innerText;
     e.target.className = 'list-group-item';
-    e.target.innerHTML = '<del>'+text+'</del>';
+    e.target.style = "text-decoration: line-through";
     let timeout = setTimeout(delayedDelete, 1000);
     function delayedDelete (){
         itemList.removeChild(e.target);
